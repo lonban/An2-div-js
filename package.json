@@ -1,0 +1,27 @@
+{
+  "name": "an2-div-js",
+  "version": "1.0.0",
+  "description": "与视图元素相关，使用方法类jq",
+  "main": "index.js",
+  "directories": {
+    "src": "src"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lonban/An2-div-js.git"
+  },
+  "keywords": [
+    "an",
+    "longbang",
+    "龙邦"
+  ],
+  "author": {
+    "name": "龙邦",
+    "email": "x135356@sina.com",
+    "url": "https://github.com/antietie"
+  },
+  "license": "MIT"
+}
