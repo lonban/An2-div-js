@@ -3,8 +3,12 @@ class Div
   type=''
   current={}
 
-  constructor()
-  {}
+
+  constructor(type,div)
+  {
+    this.type=type||'';
+    this.current=div||'';
+  }
 
   type_(fun)
   {
@@ -23,34 +27,36 @@ class Div
     let val = name.substring(1);
     let arr = [];
     let elements = {};
+    let type='';
+    let current='';
     switch(top){
       case '#':
-        this.type = 'id';
-        this.current = document.getElementById(val);
+        type = 'id';
+        current = document.getElementById(val);
         break;
       case '.':
-        this.type = 'class';
+        type = 'class';
         arr = [];
         elements = document.getElementsByClassName(val);
         if(elements.length>0){
           for(let i=0;i<elements.length;i++){
             arr.push(elements[i]);
           }
-          this.current = arr;
+          current = arr;
         }
         break;
       default:
-        this.type = 'tag';
+        type = 'tag';
         arr = [];
         elements = document.getElementsByTagName(top+val);
         if(elements.length>0){
           for(let i=0;i<elements.length;i++){
             arr.push(elements[i]);
           }
-          this.current = arr;
+          current = arr;
         }
     }
-    return this;
+    return new Div(type,current);
   }
 
   /*被选元素自身*/
